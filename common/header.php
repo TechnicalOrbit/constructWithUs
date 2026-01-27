@@ -7,7 +7,7 @@
     <div class="w-100 d-flex justify-content-between align-items-center">
       <div class="d-flex justify-content-between align-items-center gap-2">
         <div>
-          <div>Company name</div>
+          <div>JNV AND COM</div>
           <div>GST: No.</div>
         </div>
       </div>
@@ -22,7 +22,9 @@
   </div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.php">TMT Steel</a>
+      <a class="navbar-brand" href="index.php">
+        <img src="assest/img/comlogo.png" alt="" class="img-fluid" width="50px">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tmtsteel" aria-controls="tmtsteel" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

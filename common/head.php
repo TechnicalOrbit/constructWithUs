@@ -18,7 +18,7 @@
 
 <style>
   .subheader {
-    background-image: url("assest/img/slider1.jpg");
+    background-image: url("assest/img/slider2.png");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 200px;
