@@ -1,0 +1,40 @@
+/* Hide default cursor */
+
+/* body{
+  cursor: none;
+} */
+
+/* Outer circle */
+.cursor {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #0066ff; /* Blue */
+  position: fixed;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease-out;
+  z-index: 9999;
+}
+
+/* Inner dot */
+.cursor-dot {
+  width: 4px;
+  height: 4px;
+  background: #0066ff; /* Blue */
+  position: fixed;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* Hover effect on links & buttons */
+a:hover ~ .cursor,
+button:hover ~ .cursor {
+  transform: translate(-50%, -50%) scale(1.4);
+}

@@ -1,0 +1,52 @@
+
+/* Start header */
+
+.mainheader{
+  background-color:  rgb(255 193 7) !important;
+  /*#1E3A8A*/
+}
+
+.mainheader .upparnav{
+color: black;
+}
+
+.mainheader .upparnav{
+padding: 5px;
+font-weight: 500;
+}
+/* end header */
+
+/* Start Slider */
+
+.slideimg{
+  max-height: 500px;
+}
+
+/* End Slider */
+
+
+
+/* start footer */
+.footer{
+  background-color: #000000;
+
+}
+
+.footer *{
+  color:white;
+}
+
+
+/* end footer */
+
+/* FAQs  */
+
+.fquestion{
+  background-color: white !important;
+}
+
+/* End FAQs */
+
+.menu li{
+  margin: 0px 18px;
+}
