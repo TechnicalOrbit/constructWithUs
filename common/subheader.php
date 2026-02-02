@@ -1,5 +1,5 @@
 <!--Start Subheader -->
-<section class="bg-danger subheader">
+<section class=" subheader">
   <div class="container">
     <div class="text-center">
       <h2 class="fw-bold pt-5"><?php echo $subvalue; ?></h2>

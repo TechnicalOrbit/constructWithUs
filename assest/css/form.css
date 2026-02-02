@@ -1,0 +1,105 @@
+.form-container {
+  background: #fff;
+  padding: 25px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.form-container h2, button {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: none;
+}
+
+.form-group select{
+  width: 220px;
+}
+
+.form-group textarea{
+  width: 460px;
+}
+
+
+.full-width {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.reset-btn {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.submit-btn {
+  padding: 10px 25px;
+  border: none;
+  background: #fbbc04;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+
+  .form-buttons {
+    justify-content: center;
+  }
+}
+
+
+.closeSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeSection button{
+  border: none;
+  background-color: white;
+  padding: 5px 10px;
+}
+
+
+.closeSection button:hover{
+  border: none;
+  background-color: rgb(242, 5, 5);
+  border-radius: none;
+  padding: 5px 10px;
+  color: white;
+}

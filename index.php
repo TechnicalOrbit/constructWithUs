@@ -26,8 +26,12 @@
           <button type="button" data-bs-target="#autoSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#autoSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
           <button type="button" data-bs-target="#autoSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#autoSlider" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
         <div class="carousel-inner slideimg">
+          <div class="carousel-item active">
+            <img src="assest/img/slider15.jpg" class="d-block w-100" alt="...">
+          </div>
           <div class="carousel-item active">
             <img src="assest/img/slider11.jpg" class="d-block w-100" alt="...">
           </div>
@@ -548,6 +552,29 @@
           }
         }
       });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+
+      // Open modal on button click
+      $('#myModal').modal('show');
+
+      $("#openModal").click(function() {
+        $('#myModal').modal('show');
+      })
+
+
+      // Close modal click at inside modal button 
+      $('#closeModal').on('click', function() {
+        $('#myModal').modal('hide');
+      });
+
+      $('#enquiryForm').on('submit', function(e) {
+        e.preventDefault();
+        $('#myModal').modal('hide');
+      });
+
     });
   </script>
 
