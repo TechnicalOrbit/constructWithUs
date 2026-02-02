@@ -4,11 +4,9 @@
 <!-- Start Header -->
 <header class="mainheader">
   <div class="container upparnav">
-    <div class="w-100 d-flex justify-content-between align-items-center">
+    <div class="w-100 d-flex justify-content-between align-items-center gap-3">
       <div class="d-flex justify-content-between align-items-center gap-2">
-        <div>
-          <div class="fw-bold">JNP AND COMPANY</div>
-        </div>
+        <div class="fw-bold">JNP AND COMPANY</div>
       </div>
       <div class="d-flex flex-md-row flex-column justify-content-center  align-items-md-center gap-md-3 gap-0">
         <div class="fw-bold">Connect to us :</div>

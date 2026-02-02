@@ -3,7 +3,7 @@
   <footer class="container py-3 mt-2">
     <div class="row">
       <div class="col-md-3 my-2">
-        <div class=" footheader">[Comapny Name]</div>
+        <div class=" footheader">JNP AND COMPANY</div>
         <div class="d-flex justify-content-center align-items-center flex-column gap-2">
           <p>JNP AND COMPANY in Kushinagar is one of the leading businesses in the Cement Dealers. Also known for Cement Dealers, Building Material Dealers, Building Material Dealers-Capstone, Steel Building Material Dealers, Iron Building Material Dealers and much more.</p>
         </div>
