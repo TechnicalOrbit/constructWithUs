@@ -1,15 +1,3 @@
-<?php
-require "require/_dbconnect.php";
-$homesql = "SELECT * FROM `homeslider`";
-$result = $conn->query($homesql);
-$row = $result->fetch_assoc();
-$slider1 = $row['slider1'];
-$slider2 = $row['slider2'];
-$slider3 = $row['slider3'];
-$slider4 = $row['slider4'];
-$slider5 = $row['slider5'];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,19 +26,19 @@ $slider5 = $row['slider5'];
         <div class="carousel-inner slideimg">
 
           <div class="carousel-item active">
-            <img src="assest/img/<?php echo $slider1; ?>" class="d-block w-100" alt="...">
+            <img src="assest/img/slider1.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item ">
-            <img src="assest/img/<?php echo $slider2; ?>" class="d-block w-100" alt="...">
+            <img src="assest/img/slider2.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="assest/img/<?php echo $slider3; ?>" class="d-block w-100" alt="...">
+            <img src="assest/img/slider3.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="assest/img/<?php echo $slider4; ?>" class="d-block w-100" alt="...">
+            <img src="assest/img/slider4.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="assest/img/<?php echo $slider5; ?>" class="d-block w-100" alt="...">
+            <img src="assest/img/slider5.png" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#autoSlider" data-bs-slide="prev">
