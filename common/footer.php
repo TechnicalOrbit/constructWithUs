@@ -1,3 +1,35 @@
+<?php
+
+require "require/_dbconnect.php";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $name = test_input($_POST['name']);
+  $email = test_input($_POST['email']);
+  $mobile = test_input($_POST['mobile']);
+  $material = test_input($_POST['material']);
+  $msg = test_input($_POST['msg']);
+  $sqlform = "INSERT INTO `order` ( `name`, `email`, `mobile`, `material`, `message`, `orderdate`) VALUES ( '$name', '$email', '$mobile', '$material', '$msg ', current_timestamp())";
+
+  $resultform = $conn->query($sqlform);
+  // if ($resultform) {
+  //   echo "Form submit successful";
+  // } else {
+  //   echo "Form is not submit";
+  // }
+}
+
+function test_input($data)
+{
+  $data = stripslashes($data);
+  $data = trim($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+
+?>
+
+
 <!-- Start Footer -->
 <div class="footer">
   <footer class="container py-3 mt-2">
@@ -85,7 +117,7 @@
 
 
 
-
+<!-- Form modal -->
 <div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -96,28 +128,28 @@
           <button id="closeModal">X</button>
         </div>
 
-        <form>
+        <form action=<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> method="post">
           <div class="form-row">
             <div class="form-group">
               <label>Full Name</label>
-              <input type="text" placeholder="Enter your name">
+              <input type="text" placeholder="Enter your name" name="name">
             </div>
 
             <div class="form-group">
               <label>Email address</label>
-              <input type="email" placeholder="Enter email">
+              <input type="email" placeholder="Enter email" name="email">
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label>Mobile Number</label>
-              <input type="tel" placeholder="Enter mobile number">
+              <input type="tel" placeholder="Enter mobile number" name="mobile">
             </div>
 
             <div class="form-group">
               <label>Choose Material</label>
-              <select>
+              <select name="material">
                 <option>Choose Material</option>
                 <option>Cement</option>
                 <option>Bars->(Chhad)</option>
@@ -129,7 +161,7 @@
 
           <div class="form-group full-width">
             <label>Message</label>
-            <textarea rows="4" placeholder="Your message"></textarea>
+            <textarea rows="4" placeholder="Your message" name="msg"></textarea>
           </div>
 
           <div class="form-buttons">

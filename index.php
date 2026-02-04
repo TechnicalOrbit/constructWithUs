@@ -1,3 +1,15 @@
+<?php
+require "require/_dbconnect.php";
+$homesql = "SELECT * FROM `homeslider`";
+$result = $conn->query($homesql);
+$row = $result->fetch_assoc();
+$slider1 = $row['slider1'];
+$slider2 = $row['slider2'];
+$slider3 = $row['slider3'];
+$slider4 = $row['slider4'];
+$slider5 = $row['slider5'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +17,7 @@
   <?php require "common/head.php" ?>
   <link rel="stylesheet" href="assest/css/owlcarousel.css">
   <link rel="stylesheet" href="assest/css/owDefault.css">
-
-
-
 </head>
-
-
 
 <body>
 
@@ -29,20 +36,21 @@
           <button type="button" data-bs-target="#autoSlider" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
         <div class="carousel-inner slideimg">
+
           <div class="carousel-item active">
-            <img src="assest/img/slider15.jpg" class="d-block w-100" alt="...">
+            <img src="assest/img/<?php echo $slider1; ?>" class="d-block w-100" alt="...">
           </div>
-          <div class="carousel-item active">
-            <img src="assest/img/slider11.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="assest/img/slider12.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-item ">
+            <img src="assest/img/<?php echo $slider2; ?>" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="assest/img/slider13.jpg" class="d-block w-100" alt="...">
+            <img src="assest/img/<?php echo $slider3; ?>" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="assest/img/slider4.png" class="d-block w-100" alt="...">
+            <img src="assest/img/<?php echo $slider4; ?>" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assest/img/<?php echo $slider5; ?>" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#autoSlider" data-bs-slide="prev">

@@ -44,6 +44,18 @@
               <li><a class="dropdown-item text-white hovernone" href="aggerate.php">Aggerate (Gitti) </a></li>
             </ul>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Material Price
+            </a>
+            <ul class="dropdown-menu bg-dark ">
+              <li><a class="dropdown-item text-white hovernone" href="cementprice.php">Cement Price</a></li>
+              <li><a class="dropdown-item text-white hovernone" href="barsprice.php">Bar (chhad) Price</a></li>
+              <li><a class="dropdown-item text-white hovernone" href="sandprice.php">Sand (Balu) Price</a></li>
+              <li><a class="dropdown-item text-white hovernone" href="aggerateprice.php">Aggerate (Gitti) Price</a></li>
+            </ul>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="faq.php">FAQ</a>
           </li>

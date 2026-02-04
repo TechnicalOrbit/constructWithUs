@@ -32,7 +32,12 @@
             Customer satisfaction is at the heart of our business. We believe in transparent pricing, genuine materials, timely availability, and honest service. Whether it is a small residential project or a large commercial construction, we ensure the right guidance and the best material at competitive prices.</p>
         </div>
         <div class="col-12 col-md-5 mt-3">
-          <img src="assest/img/slider1.jpg" alt="myphoto" class="img-fluid" width="100%">
+          <div class="d-flex  flex-wrap justify-content-center ">
+            <img src="assest/img/gitti1.jpg" alt="" class="img-fluid" width="40%">
+            <img src="assest/img/ambuja.jpg" alt="" class="img-fluid" width="40%">
+            <img src="assest/img/16mm.jpg" alt="" class="img-fluid" width="40%">
+            <img src="assest/img/sand.jpg" alt="" class="img-fluid" width="40%">
+          </div>
         </div>
       </div>
     </section>

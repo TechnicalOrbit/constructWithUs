@@ -1,0 +1,80 @@
+.mainContainer{
+  background-image: url('../img/contact1.png');
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.formcontainer{
+  background-color: white;
+  width: 50%;
+  padding: 20px;
+  margin: 10px;
+}
+
+.form input, button, select{
+  border-radius: 0px !important;
+  padding: 15px;
+  box-shadow: none !important;
+}
+
+.form select{
+  height: 55px;
+}
+
+
+
+
+.form input:focus{
+  border-color: black;
+}
+
+
+.formWidth{
+  max-width:50%;
+}
+
+@media screen and (max-width: 768px) {
+
+ .formWidth{
+    max-width: 100%;
+ }
+
+ .formcontainer{
+        width: 100%;
+ }
+ 
+}
+
+
+/* sidebar */
+
+
+
+
+
+
+
+/* Dashboard Main */
+
+/* .main{
+  border: 2px solid red;
+  min-height: 100px;
+  width: 75vw;
+  margin: auto;
+  position: absolute;
+  transform: translate(28%, 10%);
+} */
+
+
+
+/* slider  */
+
+
+.slider{
+  border-radius: 0px !important;
+  padding: 10px !important;
+}

@@ -3,6 +3,9 @@
 
 .mainheader{
   background-color:  rgb(255 193 7) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 3;
   /*#1E3A8A*/
 }
 
