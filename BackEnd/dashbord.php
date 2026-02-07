@@ -31,14 +31,14 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
   <!-- required header -->
   <?php require "common/header.php"; ?>
 
-  <div class="d-flex gap-3">
+  <div class="d-flex gap-3 ">
     <!-- required Sidebar -->
     <div class="sidebar">
       <?php require "common/sidebar.php"; ?>
     </div>
-    <div class="container my-5 mb-5">
+    <div class="container my-5 mb-5 main">
       <div class="row justify-content-center  ">
-        <div class="col-md-5">
+        <div class="col-md-5 mb-5">
           <div class="card">
             <div class="card-body text-center">
               <img src="assest/img/totalcount1.png" alt="" class="img-fluid mb-2 " width="100px">

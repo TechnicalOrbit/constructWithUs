@@ -2,8 +2,11 @@
   <div class="container">
     <a class="navbar-brand" href="dashbord.php">JNP AND COMPANY</a>
     <button class="navbar-toggler" type="button" id="toggleSidebar">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon humburgur"></span>
     </button>
-    <div><button class="bg-warning btn"><a href="./TMTsteel/../../index.php" class="text-decoration-none text-white fs-5">Open Website</a></button></div>
+
+    <button class="bg-warning btn">
+      <a href="./TMTsteel/../../index.php" class="text-decoration-none text-white fs-5 bg-warning btn">Open Website</a>
+    </button>
   </div>
 </nav>
