@@ -16,7 +16,7 @@
      </svg> <span class="fs-4">Dashboard</span>
    </a>
    <hr>
-   <ul class="nav nav-pills flex-column mb-auto">
+   <ul class="nav nav-pills flex-column mb-auto sidebar">
      <li class="nav-item">
        <a href="home.php" class="nav-link link-body-emphasis" aria-current="page"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
          </svg>
@@ -31,28 +31,28 @@
        </a>
      </li>
      <li>
-       <a href="#" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
+       <a href="cementPrice.php" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
            <use xlink:href="#speedometer2"></use>
          </svg>
          Cement Price
        </a>
      </li>
      <li>
-       <a href="#" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
+       <a href="barsPrice.php" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
            <use xlink:href="#speedometer2"></use>
          </svg>
          Bars Price
        </a>
      </li>
      <li>
-       <a href="#" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
+       <a href="aggeratePrice.php" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
            <use xlink:href="#speedometer2"></use>
          </svg>
          Aggerate Price
        </a>
      </li>
      <li>
-       <a href="#" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
+       <a href="sandPrice.php" class="nav-link link-body-emphasis"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
            <use xlink:href="#speedometer2"></use>
          </svg>
          Sand Price

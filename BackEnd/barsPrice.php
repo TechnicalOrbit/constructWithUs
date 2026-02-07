@@ -4,18 +4,13 @@ require "require/_dbconnect.php";
 
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
   if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $slider1 = $_POST['slider1'];
-    $slider2 = $_POST['slider2'];
-    $slider3 = $_POST['slider3'];
-    $slider4 = $_POST['slider4'];
-    $slider5 = $_POST['slider5'];
-    $sql = "UPDATE `homeslider` SET `slider1` = '$slider1', `slider2` = '$slider2', `slider3` = '$slider3', `slider4` = '$slider4', `slider5` = '$slider5' WHERE `homeslider`.`sliderId` = 1;";
-
-    $result = $conn->query($sql);
+    $barsprice = $_POST['bars'];
+    $csql = "UPDATE `price` SET `bars` = '$barsprice' WHERE `price`.`pId` = 1";
+    $result = $conn->query($csql);
     // if ($result) {
-    //   echo "data inserted succefully";
+    //   echo "Price updated successfully";
     // } else {
-    //   echo "data not inserted";
+    //   echo "Price is not updated ";
     // }
   }
 } else {
@@ -44,27 +39,9 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     <div class="container my-4 mb-5">
       <form method="post" action=<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>>
         <div class="mb-3">
-          <label for="slider1" class="form-label">Slider 1</label>
-          <input type="file" accept="image/*" class="form-control slider" id="slider1" name="slider1">
+          <label for="bars" class="form-label">Bars Price</label>
+          <input type="file" accept="image/*" class="form-control slider" id="bars" name="bars">
         </div>
-        <div class="mb-3">
-          <label for="slider2" class="form-label">Slider 2</label>
-          <input type="file" accept="image/*" class="form-control slider" id="slider2" name="slider2">
-        </div>
-        <div class="mb-3">
-          <label for="slider3" class="form-label">Slider 3</label>
-          <input type="file" accept="image/*" class="form-control slider" id="slider3" name="slider3">
-        </div>
-        <div class="mb-3">
-          <label for="slider4" class="form-label">Slider 4</label>
-          <input type="file" accept="image/*" class="form-control slider" id="slider4" name="slider4">
-        </div>
-        <div class="mb-3">
-          <label for="slider5" class="form-label">Slider 5</label>
-          <input type="file" accept="image/*" class="form-control slider" id="slider5" name="slider5">
-        </div>
-
-
         <button type="submit" class="btn btn-primary slider w-25">Submit</button>
       </form>
     </div>

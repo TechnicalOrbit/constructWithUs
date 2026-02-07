@@ -3,7 +3,7 @@
 <script src="assest/js/cursor.js">
 </script>
 
-<script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+<script src="assest/js/jQuery.js"></script>
 
 <script>
   $(document).ready(function() {
@@ -27,4 +27,47 @@
     });
 
   });
+</script>
+
+
+
+<script>
+  function validateForm() {
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
+    let material = document.getElementById("option").value;
+
+    console.log(material);
+
+    // Name validation
+    if (name == "") {
+      alert("Name is required");
+      return false;
+    }
+
+    // Email validation
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      alert("Enter valid email address");
+      return false;
+    }
+
+    // Mobile validation (10 digits)
+    let mobilePattern = /^[0-9]{10}$/;
+    if (!mobilePattern.test(mobile)) {
+      alert("Enter valid 10 digit mobile number");
+      return false;
+    }
+
+    // Select validation
+    if (material === "Select Material") {
+      alert("Please select a Material");
+      return false;
+    }
+
+    alert("Ordered successfully ✅");
+    return true;
+  }
 </script>

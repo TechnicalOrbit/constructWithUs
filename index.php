@@ -1,15 +1,23 @@
+<?php
+include_once("require/_dbconnect.php");
+$sql = "SELECT * FROM `homeslider`";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <?php require "common/head.php" ?>
+  <?php include("common/head.php"); ?>
   <link rel="stylesheet" href="assest/css/owlcarousel.css">
   <link rel="stylesheet" href="assest/css/owDefault.css">
 </head>
 
 <body>
 
-  <?php require "common/header.php" ?>
+  <?php include("common/header.php"); ?>
 
   <!-- Start Main -->
   <main>
@@ -26,19 +34,19 @@
         <div class="carousel-inner slideimg">
 
           <div class="carousel-item active">
-            <img src="assest/img/slider1.png" class="d-block w-100" alt="...">
+            <img src="assest/img/<?php echo $row['slider1']; ?>" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item ">
-            <img src="assest/img/slider2.png" class="d-block w-100" alt="...">
+            <img src="assest/img/<?php echo $row['slider2']; ?>" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="assest/img/slider3.png" class="d-block w-100" alt="...">
+            <img src="assest/img/<?php echo $row['slider3']; ?>" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="assest/img/slider4.png" class="d-block w-100" alt="...">
+            <img src="assest/img/<?php echo $row['slider4']; ?>" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="assest/img/slider5.png" class="d-block w-100" alt="...">
+            <img src="assest/img/<?php echo $row['slider5']; ?>" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#autoSlider" data-bs-slide="prev">
@@ -382,146 +390,18 @@
 
     <!-- End FAQs -->
 
-
-
-    <!-- 
-    <section class="experts-section">
-      <h2>We Are Experts</h2>
-
-      <div class="owl-carousel experts-carousel">
-        <div class="item">
-          <img src="assest/img/slider1.jpg" alt="Expert 1">
-        </div>
-        <div class="item">
-          <img src="assest/img/slider1.jpg" alt="Expert 2">
-        </div>
-        <div class="item">
-          <img src="assest/img/slider1.jpg" alt="Expert 3">
-        </div>
-        <div class="item">
-          <img src="assest/img/slider1.jpg" alt="Expert 4">
-        </div>
-      </div>
-    </section> -->
-
-    <!-- Start bars  -->
-    <!-- <section class="container my-3">
-      <h2 class="text-center">Types of Bars, Thickness & Their Uses</h2>
-      <div class="experts-section my-2">
-        <div class="owl-carousel experts-carousel">
-          <div class="item">
-            <div class="card">
-              <div class="card-body bg-warning">
-                <h5 class="card-title">Fe 415 Bars</h5>
-                <div><strong>Thickness: &nbsp;</strong>8mm, 10mm, 12mm</div>
-                <div> <strong>Uses: &nbsp;</strong>Small houses, slabs, and light residential construction.</div>
-                <a href="bars.php" class="btn " style="background-color: yellow;">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="card">
-              <div class="card-body bg-warning">
-                <h5 class="card-title">Fe 500 Bars</h5>
-                <div><strong>Thickness: &nbsp;</strong>8mm, 10mm, 12mm, 16mm, 20mm</div>
-                <div> <strong>Uses: &nbsp;</strong>Homes, apartments, and commercial buildings.</div>
-                <a href="bars.php" class="btn " style="background-color: yellow;">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="card">
-              <div class="card-body bg-warning">
-                <h5 class="card-title">Fe 500D Bars</h5>
-                <div><strong>Thickness: &nbsp;</strong>10mm, 12mm, 16mm, 20mm</div>
-                <div> <strong>Uses: &nbsp;</strong>Earthquake-resistant structures and high-safety buildings.</div>
-                <a href="bars.php" class="btn " style="background-color: yellow;">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="card">
-              <div class="card-body bg-warning">
-                <h5 class="card-title">Fe 550 Bars</h5>
-                <div><strong>Thickness: &nbsp;</strong>16mm, 20mm, 25mm, 32mm</div>
-                <div> <strong>Uses: &nbsp;</strong> Heavy construction like bridges, factories, and high-rise buildings.</div>
-                <a href="bars.php" class="btn " style="background-color: yellow;">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- End bars  -->
-
-    <!-- Start Aggregate -->
-
-    <!-- <section class="container my-3">
-      <h2 class="text-center"> Types of Aggregate->(Gitti)</h2>
-      <div class="experts-section my-2">
-        <div class="owl-carousel experts-carousel">
-          <div class="item">
-            <div class="card">
-              <div class="card-body bg-warning">
-                <h5 class="card-title">10 mm Crushed Stone</h5>
-                <p>Used for slabs, thin concrete work, and precast items.</p>
-                <a href="aggerate.php" class="btn " style="background-color: yellow;">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="card">
-              <div class="card-body bg-warning">
-                <h5 class="card-title">20 mm Crushed Stone</h5>
-                <p>Most commonly used for RCC work, beams, columns, and slabs.</p>
-                <a href="aggerate.php" class="btn " style="background-color: yellow;">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="card">
-              <div class="card-body bg-warning">
-                <h5 class="card-title">40 mm Crushed Stone</h5>
-                <p>Used for heavy foundations, mass concrete, and road base.</p>
-                <a href="aggerate.php" class="btn " style="background-color: yellow;">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="card">
-              <div class="card-body bg-warning">
-                <h5 class="card-title">Stone Dust / Crusher Dust</h5>
-                <p>Very fine particles, used for paver blocks, flooring base, and leveling.</p>
-                <a href="aggerate.php" class="btn " style="background-color: yellow;">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="card">
-              <div class="card-body bg-warning">
-                <h5 class="card-title">Graded Crushed Stone</h5>
-                <p>Mix of different sizes, used for strong and durable concrete.</p>
-                <a href="aggerate.php" class="btn " style="background-color: yellow;">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- End Aggregate -->
-
-    <!--  -->
-
   </main>
 
   <!-- End Main -->
 
   <!-- include footer file -->
-  <?php require "common/footer.php" ?>
+  <?php include("common/footer.php"); ?>
 
-  <!-- include foot file -->
-  <?php require "common/foot.php" ?>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  <script src="assest/js/cursor.js">
+  </script>
 
   <script src="assest/js/jQuery.js"></script>
   <script src="assest/js/owlCarousel.js"></script>
@@ -550,6 +430,7 @@
       });
     });
   </script>
+
   <script>
     $(document).ready(function() {
 
@@ -573,6 +454,46 @@
 
     });
   </script>
+
+
+  <!-- <script>
+    function validateForm() {
+
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let mobile = document.getElementById("mobile").value.trim();
+      let option = document.getElementById("option").value;
+
+      // Name validation
+      if (name == "") {
+        alert("Name is required");
+        return false;
+      }
+
+      // Email validation
+      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert("Enter valid email address");
+        return false;
+      }
+
+      // Mobile validation (10 digits)
+      let mobilePattern = /^[0-9]{10}$/;
+      if (!mobilePattern.test(mobile)) {
+        alert("Enter valid 10 digit mobile number");
+        return false;
+      }
+
+      // Select validation
+      if (course == "Choose Material") {
+        alert("Please select a Material");
+        return false;
+      }
+
+      alert("Form submitted successfully ✅");
+      return true;
+    }
+  </script> -->
 
 </body>
 

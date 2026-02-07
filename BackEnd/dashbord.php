@@ -37,7 +37,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
       <?php require "common/sidebar.php"; ?>
     </div>
     <div class="container my-5 mb-5">
-      <div class="row ">
+      <div class="row justify-content-center  ">
         <div class="col-md-5">
           <div class="card">
             <div class="card-body text-center">

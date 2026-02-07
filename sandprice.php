@@ -1,3 +1,11 @@
+<?php
+include_once("require/_dbconnect.php");
+$sql = "SELECT * FROM `price`";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +22,7 @@
   <!-- Start Main -->
   <main>
     <div class="container my-3 text-center">
-      <img src="assest/img/sandprice.png" class="img-fluid" alt="">
+      <img src="assest/img/<?php echo $row['sand']; ?>" class="img-fluid" alt="">
     </div>
   </main>
 
